@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:background="@drawable/img_shadow"
+        android:padding="3dip" >
+
+        <ImageView
+            android:id="@+id/ivbook"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="3dip"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvkey"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/thumbnail" />
+
+    <TextView
+        android:id="@+id/book_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Book name"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/Category"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book_name"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Category"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dip"
+        android:gravity="right"
+        android:text="price"
+        android:textColor="#FE2E2E"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Category"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="author"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/author"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="date"
+        android:textColor="#343434"
+        android:textSize="10dip" />
+
+    <TextView
+        android:id="@+id/tvRs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/price"
+        android:layout_toLeftOf="@id/price"
+        android:gravity="right"
+        android:text="Rs."
+        android:textColor="#FE2E2E"
+        android:textSize="20dip"
+        android:textStyle="bold" />
+
+    <RatingBar
+        android:id="@+id/rtBook"
+        android:layout_width="wrap_content"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price" 
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

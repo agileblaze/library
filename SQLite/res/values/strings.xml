@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SQLite</string>
+    <string name="edit">Edit</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="image_logo">Logo image</string>
+    <string name="add_book">Add Book Details</string>
+    <string name="book_name">Book Name</string>
+    <string name="Author">Author of the Book</string>
+    <string name="price">Price of the Book</string>
+    <string name="buk_image">Open Gallery</string>
+    <string name="buk_save">Save</string>
+    <string name="image_path">Image Location</string>
+    <string name="buk_purchase_date">Date of Book purchased</string>
+
+    <string-array name="Book_arrays">
+        <item>Horror</item>
+        <item>Graphics</item>
+        <item>Fantasy</item>
+        <item>Historical</item>
+        <item>Romance</item>
+        <item>Religious</item>
+        <item>Baby</item>
+        <item>Ages</item>
+    </string-array>
+
+    <string name="delete">Delete</string>
+    <string name="edit_books">Edit Book Detail</string>
+    <string name="saveChange">Save Changes</string>
+
+    <string-array name="Search_arrays">
+        <item>Show All</item>
+        <item>By Book Name</item>
+        <item>By Author Name</item>
+        <item>By Price</item>
+        <item>By Date</item>
+        <item>By Rating</item>
+    </string-array>
+
+</resources>

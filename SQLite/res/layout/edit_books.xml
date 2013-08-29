@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fillbox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bgimage"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="@string/edit_books"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/topbar_shade"
+                android:orientation="horizontal" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/Orange"
+                android:visibility="invisible" />
+
+            <Spinner
+                android:id="@+id/sp_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/Book_arrays" />
+
+            <EditText
+                android:id="@+id/edt_bukname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/book_name"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                android:textStyle="bold" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/edt_Author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/Author"
+                android:inputType="textPersonName"
+                android:textSize="15dp"
+                android:textStyle="bold" >
+            </EditText>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/edt_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="20"
+                    android:ems="10"
+                    android:enabled="false"
+                    android:hint="@string/buk_purchase_date"
+                    android:inputType="date"
+                    android:textSize="15dp"
+                    android:textStyle="bold" >
+                </EditText>
+
+                <ImageButton
+                    android:id="@+id/Img_but_calender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:contentDescription="@string/buk_image"
+                    android:src="@drawable/calender" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/edt_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/price"
+                android:inputType="numberDecimal"
+                android:textSize="15dp"
+                android:textStyle="bold" >
+            </EditText>
+
+            <RatingBar
+                android:id="@+id/rtBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="1"
+                android:requiresFadingEdge="vertical"
+                android:stepSize="1.0" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/save_data"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal|center"
+        android:layout_weight="1.0"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/saveChange" />
+
+</LinearLayout>

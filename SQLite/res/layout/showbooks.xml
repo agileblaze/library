@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgimage"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="3dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#70ffffff"
+            android:drawableRight="@drawable/search"
+            android:gravity="left|center_vertical"
+            android:hint="Search"
+            android:imeOptions="actionDone"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColorHint="#FFFFFF" >
+        </EditText>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/buklist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:cacheColorHint="#70ffffff"
+        android:fadingEdge="horizontal|vertical"
+        android:fadingEdgeLength="5dp" >
+    </ListView>
+
+</LinearLayout>
