@@ -108,11 +108,11 @@
 
                 <ImageView
                     android:id="@+id/bukImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
                     android:background="@drawable/img_shadow"
                     android:contentDescription="@string/buk_image"
-                    android:padding="10dp"
+                    android:padding="5dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/empty_photo" />
 
