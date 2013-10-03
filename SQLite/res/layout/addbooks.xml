@@ -35,6 +35,23 @@
                 android:textColor="@color/Orange"
                 android:visibility="invisible" />
 
+            <Button
+                android:id="@+id/butScan"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Scan" >
+            </Button>
+
+            <TextView
+                android:id="@+id/tvOR"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="(OR)"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
             <Spinner
                 android:id="@+id/sp_category"
                 android:layout_width="match_parent"
@@ -126,13 +143,13 @@
 
                 <RatingBar
                     android:id="@+id/rtBook"
+                    style="@style/RatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/pick_image"
                     android:layout_toRightOf="@id/bukImage"
                     android:numStars="5"
                     android:rating="1"
-                    style="@style/RatingBar"
                     android:requiresFadingEdge="vertical"
                     android:stepSize="1.0" />
             </RelativeLayout>

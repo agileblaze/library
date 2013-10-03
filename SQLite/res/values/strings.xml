@@ -37,5 +37,6 @@
         <item>By Date</item>
         <item>By Rating</item>
     </string-array>
+    <string name="Scan">Barcode Scan</string>
 
 </resources>

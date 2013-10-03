@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="dexedLibs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/SQLite/bin/dexedLibs/android-support-v4-0e157c204d8de7384cd0b5dc98f8c2dc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SQLite/bin/dexedLibs/achartengine-1.0.0-bbc55ff8c1ebdcd7b89a5b2c12812863.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SQLite/bin/dexedLibs/android-support-v4-ef3b724c4001a18d7eaf322c8dde9227.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SQLite/bin/dexedLibs/achartengine-1.0.0-c912eb181a57a0453c782efaf7368744.jar!/" />
+      <root url="jar://$PROJECT_DIR$/SQLite/bin/dexedLibs/achartengine-1.0.0-64c0599153d783527ba76665cf95c7e3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

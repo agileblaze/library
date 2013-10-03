@@ -17,6 +17,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,7 +39,7 @@ public class addbooks extends Activity implements OnClickListener {
 	Uri photoUri;
 	private ImageButton datepicker;
 	private EditText book_name, author_name, date, price;
-	private Button pick, save;
+	private Button pick, save, scan;
 	private TextView path_display, error;
 	private Spinner category;
 	private RatingBar rating;
@@ -46,6 +47,7 @@ public class addbooks extends Activity implements OnClickListener {
 	private ImageView buk_image;
 	File capturePath = null;
 	private static final int SELECT_PICTURE = 1;
+	private static final int REQUEST_CODE_SCANNER = 2;
 	Uri mImageCaptureUri;
 	byte[] byteImage1 = null;
 	static final int DATE_DIALOG_ID = 0;
@@ -53,6 +55,7 @@ public class addbooks extends Activity implements OnClickListener {
 	private int mMonth;
 	private int mDay;
 
+	// http://mobile.tutsplus.com/tutorials/android/android-sdk-create-a-barcode-reader/
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -65,6 +68,7 @@ public class addbooks extends Activity implements OnClickListener {
 		datepicker = (ImageButton) findViewById(R.id.Img_but_calender);
 		price = (EditText) findViewById(R.id.edt_price);
 		save = (Button) findViewById(R.id.save_data);
+		scan = (Button) findViewById(R.id.butScan);
 		pick = (Button) findViewById(R.id.pick_image);
 		error = (TextView) findViewById(R.id.tvError);
 		buk_image = (ImageView) findViewById(R.id.bukImage);
@@ -72,6 +76,7 @@ public class addbooks extends Activity implements OnClickListener {
 		rating = (RatingBar) findViewById(R.id.rtBook);
 		pick.setOnClickListener(this);
 		save.setOnClickListener(this);
+		scan.setOnClickListener(this);
 
 		datepicker.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
@@ -86,7 +91,7 @@ public class addbooks extends Activity implements OnClickListener {
 		public void onDateSet(DatePicker view, int year, int monthOfYear,
 				int dayOfMonth) {
 			mYear = year;
-			mMonth = monthOfYear +1;
+			mMonth = monthOfYear + 1;
 			mDay = dayOfMonth;
 			updateDisplay();
 		}
@@ -228,8 +233,9 @@ public class addbooks extends Activity implements OnClickListener {
 				View layout = inflater.inflate(R.layout.toast,
 						(ViewGroup) findViewById(R.id.toast));
 
-				TextView text = (TextView) layout.findViewById(R.id.tv_buk_name);
-				text.setText(" " + book_name.getText().toString()+ " ");
+				TextView text = (TextView) layout
+						.findViewById(R.id.tv_buk_name);
+				text.setText(" " + book_name.getText().toString() + " ");
 				Toast toast = new Toast(getApplicationContext());
 				toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
 				toast.setDuration(Toast.LENGTH_LONG);
@@ -249,7 +255,11 @@ public class addbooks extends Activity implements OnClickListener {
 				error.setText(text);
 			}
 
-			
+			break;
+		case R.id.butScan:
+			Log.i("Click", "Button Click");
+			Intent barcode = new Intent(addbooks.this, CameraTestActivity.class);
+			startActivity(barcode);
 			break;
 		case R.id.pick_image:
 			Intent intent = new Intent();
@@ -259,6 +269,7 @@ public class addbooks extends Activity implements OnClickListener {
 					Intent.createChooser(intent, "Select Picture"),
 					SELECT_PICTURE);
 			break;
+
 		}
 	}
 
