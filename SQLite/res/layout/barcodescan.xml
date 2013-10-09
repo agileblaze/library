@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/bgimage"
     android:orientation="vertical" >
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/layoutroot"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_weight="0.5"
         android:orientation="horizontal"
         android:padding="10dp" >
 
@@ -16,30 +17,47 @@
             android:id="@+id/cameraPreview"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutroot"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.5"
+        android:orientation="horizontal"
+        android:padding="10dp" >
 
         <TextView
             android:id="@+id/scanText"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:textColor="@color/Orange"
             android:layout_marginBottom="30dp"
             android:layout_marginLeft="10dp"
+            android:layout_weight="80"
+            android:text="Scanning..."
+            android:textColor="@color/Orange"
             android:textSize="15dp"
-            android:textStyle="bold"
-            android:text="Scanning..." />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/ScanButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/png"
+            android:drawablePadding="3dp"
             android:text="Scan"
             android:textSize="12dp"
             android:textStyle="bold" />
-    </RelativeLayout>
+    </LinearLayout>
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/search"
+        android:layout_width="fill_parent"
+        android:text="search"
+        android:layout_height="50dp" >
+    </Button>
+
+</LinearLayout>
